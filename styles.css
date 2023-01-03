@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Space Grotesk', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.left{
+    background-image: url("images/bg-main-desktop.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.frontCard{
+    background-image: url("images/bg-card-front.png");
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: 30vh;
+    position: relative;
+    left: 40%;
+}
+.frontCard img{
+    padding-left: 5%;
+    padding-top: 5%;
+    width: 20%;
+}
+.cardNumber{
+    width: 80%;
+    margin-left: 10%;
+    letter-spacing: 8px;
+    padding-top: 1vw;
+}
+.name-date{
+    display: flex;
+    padding-top: 1.5vw;
+    margin-left: 10%;
+}
+.date{
+    padding-left: 20%;
+    display: flex;
+}
+
+
+.backCard{
+    background-image: url("images/bg-card-back.png");
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 30vh;
+    position: relative;
+    left: 55%;
+    z-index: 1;
+    margin-right: 0;
+}
+
+.card-details{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 30%;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.form2{
+    display: flex;
+}
+.exp{
+    display: flex;
+    margin-top: 2vw;
+}
+.name-input, .number-input{
+    width: 90%;
+}
+.date-form input{
+    width: 30%;
+}
+.year{
+    margin-left: 5%;
+}
+.cvv{
+    display: flex;
+    flex-direction: column;
+}
+.cvv input{
+    width: 70%;
+    margin-top: 2vw;
+}
+.cvvText{
+    position: relative;
+    left: 5vw;
+}
+input{
+    height: 3vw;
+    border-radius: 10px;
+}
+input::placeholder{
+    padding-left: 1vw;
+}
+button{
+    width: 90%;
+    height: 2vw;
+    background: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    z-index: 10;
+}
+@media (max-width:1400px){
+    .cvvText{
+        position: relative;
+        left: 9vw;
+    }
+    .name-date{
+        margin-top: 8%;
+    }
+    form{
+        gap: 4vw;
+    }
+}
+@media (max-width: 1180px){
+    .cvvText{
+        position: relative;
+        top: -5%;
+    }
+}
+@media (max-width: 1000px){
+    .cvvText{
+        position: relative;
+        top: -10%;
+        left: 10vw;
+    }
+}
+@media (max-width: 950px){
+    .cvvText{
+        position: relative;
+        top: -15%;
+        left: 10vw;
+    }
+}
+
+@media (max-width: 850px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .cvvText{
+        top: 0;
+    }
+    .frontCard{
+        width: 70vw;
+        position: relative;
+        left: 0;
+        top: 13vw;
+        left: 10vw;
+        z-index: 10;
+    }
+    .backCard{
+        width: 70vw;
+        background-size: contain;
+        position: absolute;
+        left: 30%;
+        height: 30vh;
+    }
+    .left{
+        display: flex;
+        flex-direction: column-reverse;
+        background-image: url("images/bg-main-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 30vh;
+        width: 100vw;
+        padding-top: 5vh;
+    }
+    .card-details{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .name-input, .number-input{
+        width: 100%;
+    }
+    .date-form input{
+        width: 50%;
+    }
+    .cvv{
+        margin-left: 5vw;
+    }
+    .cvv input{
+        width: 80%;
+    }
+    input{
+        height: 5vw;
+    }
+    form{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25vw;
+        gap: 8vw;
+    }
+    button{
+        height: 7vw;
+        width: 100%;
+    }
+}
+@media (max-width: 680px){
+    .cvvText{
+        position: relative;
+        left: 18vw;
+    }
+}
+@media (max-width: 560px){
+    .cvvText{
+        position: relative;
+        left: 22vw;
+        top: -3vw;
+    }
+}
+@media (max-width: 450px){
+    input{
+        height: 10vw;
+    }
+    button{
+        height: 10vw;
+        margin-bottom: 10vw;
+    }
+    .frontCard{
+        top: 25vw;
+    }
+    .backCard{
+        top: 10vw;
+        left: 25vw;
+    }
+    .cardNumber{
+        width: 100%;
+        font-size: 14px;
+    }
+    .nameText{
+        width: 100%;
+        font-size: 14px;
+    }
+    .date{
+        font-size: 14px;
+        position: relative;
+        right: 5vw;
+    }
+    .cvvText{
+        top: -8vw;
+    }
+}
+.error-message{
+    color: red;
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.border-red{
+    border: 1px solid red;
+}

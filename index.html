@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="left">
+            <div class="frontCard">
+                <img src="images/card-logo.svg" alt="Card logo">
+                <p class="cardNumber">0000 0000 0000 0000</p>
+                <div class="name-date">
+                    <p class="nameText">Jane Appleseed</p>
+                    <div class="date">
+                        <p class="monthText">00</p>/
+                        <p class="yearText">00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="backCard">
+                <p class="cvvText">CVV</p>
+            </div>
+        </div>
+
+        <section class="card-details">
+            <form action="">
+                <label for="Name">CARDHOLDER NAME</label>
+                <input class="name-input" type="name" placeholder="e.g. Jane Appleseed" maxlength="40">
+                <p class="error-message error-name">Wrong format, letters only</p>
+
+                <label for="number">CARD NUMBER</label>
+                <input class="number-input" type="text" placeholder="e.g. 1234 5678 9123 0000" required maxlength="16">
+                <p class="error-message error-card">Wrong format, numbers only</p>
+
+                <div class="form2">
+                    <div class="date-form">
+                        <label for="EXP DATE">EXP. DATE (MM/YY)</label>
+                        <div class="exp">
+                            <input class="month" type="text" placeholder="MM" maxlength="2">
+                            <input class="year" type="text" placeholder="YY" maxlength="2">
+                        </div>
+                        <p class="error-message error-date">Can´t be blank</p>
+                    </div>
+
+                    <div class="cvv">
+                        <label for="CVC">CVC</label>
+                        <input class="cvvInput" type="text" placeholder="e.g. 123" maxlength="3">
+                        <p class="error-message error-cvv">Can´t be blank</p>
+                    </div>
+                </div>
+
+                <button class="boton" onclick="validacion()" type="button">Confirm</button>
+            </form>
+        </section>
+
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
